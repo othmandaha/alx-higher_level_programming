@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
+    if not roman_string:
+        return 0
     main_di = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     sub_dict = {"CM": 900, "CD": 400, "XC": 90, "XL": 40, "IX": 9, "IV": 4}
 
@@ -21,5 +23,5 @@ def roman_to_int(roman_string):
             num += main_di[key]
             i += 1
         else:
-            return None
+            return 0
     return num
