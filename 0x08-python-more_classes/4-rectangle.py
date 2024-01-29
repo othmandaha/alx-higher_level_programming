@@ -63,7 +63,7 @@ class Rectangle:
                 rec.append("\n")
         return ("".join(rec))
 
-        def __repr__(self):
-            rec = "Rectangle(" + str(self.__width)
-            rec += ", " + str(self.__height) + ")"
-            return (rec)
+    def __repr__(self):
+        rec = "Rectangle(" + str(self.__width)
+        rec += ", " + str(self.__height) + ")"
+        return (rec)
