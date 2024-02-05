@@ -1,11 +1,12 @@
-the `` 7-base_geometry `` module
-==========================
+The ``7-base_geometry`` module
+==============================
 
-Using `` BaseGeometry ``
---------------------------
+Using ``BaseGeometry``
+----------------------
 
-Importing the function from the modul:
-    >>> BG = __import__('7.base_geometry.').BaseGeometry
+Importing class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 Trying to print the area
     >>> bg = BaseGeometry()
@@ -45,6 +46,7 @@ Trying to pass a zero value
     Traceback (most recent call last):
     	      ...
     ValueError: name must be greater than 0
+
 
 Passing a positive value
     >>> bg = BaseGeometry()
