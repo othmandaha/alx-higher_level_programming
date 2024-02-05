@@ -2,7 +2,7 @@
 """ A list class """
 
 
-class Mylist(list):
+class MyList(list):
     """ a child class of list """
 
     def print_sorted(self):
