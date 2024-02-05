@@ -1,25 +1,25 @@
 #!/usr/bin/python3
-""" a base geometry BluePrint """
+"""Defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
-    """ the Base geometry class """
+    """Reprsent base geometry."""
 
     def area(self):
-        """ are calculator """
+        """Not yet implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """ validate value as integer.
+        """Validate a parameter as an integer.
 
         Args:
-            name (str): value name.
-            value (int): the value.
+            name (str): The name of the parameter.
+            value (int): The parameter to validate.
         Raises:
-            TypeError: if value is not an int.
-            ValueError: if value is equal or less than 0.
+            TypeError: If value is not an integer.
+            ValueError: If value is <= 0.
         """
         if type(value) != int:
-            raise TypeError("{} must be integer".format(name))
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
