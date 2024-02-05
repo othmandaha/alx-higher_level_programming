@@ -5,6 +5,6 @@
 class BaseGeometry:
     """ the Base geometry class """
 
-    def are(self):
+    def area(self):
         """ are calculator """
         raise Exception("area() is not implemented")
