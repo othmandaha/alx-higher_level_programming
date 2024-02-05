@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 """ a rectangle blueprint """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
