@@ -31,7 +31,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Writes the js representation of a list to a file.
+        """Writes the json representation of a list to a file.
         Args:
             list_objs (list): the list to be written.
         """
@@ -40,5 +40,5 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                list_dict = [obj.to_dicionary() for obj in list_objs]
+                list_dict = [o.to_dicionary() for o in list_objs]
                 f.write(Base.to_json_string(list_dict))
