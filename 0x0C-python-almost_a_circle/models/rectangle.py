@@ -136,10 +136,10 @@ class Rectangle(Base):
                     self.width = v
                 elif k == "height":
                     self.height = v
-                elif k == "y":
-                    self.y = v
                 elif k == "x":
                     self.x = v
+                elif k == "y":
+                    self.y = v
 
     def __str__(self):
         """Returns print() or str() representation."""
