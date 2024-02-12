@@ -96,22 +96,34 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
-        ac = 0
-        for arg in args:
-            if ac == 0:
-                if arg is None:
-                    self.__init__(self.width, self.height, self.x, self.y)
-            ac += 1
-            if ac == 1:
-                self.id = arg
-            elif ac == 2:
-                self.width = arg
-            elif ac == 3:
-                self.height = arg
-            elif ac == 4:
-                self.x = arg
-            elif ac == 5:
-                self.y = arg
+        """Update the Rectangle.
+
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
+        """
+        if args and len(args) != 0:
+            ac = 0
+            for arg in args:
+                if ac == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                ac += 1
+                if ac == 1:
+                    self.id = arg
+                elif ac == 2:
+                    self.width = arg
+                elif ac == 3:
+                    self.height = arg
+                elif ac == 4:
+                    self.x = arg
+                elif ac == 5:
+                    self.y = arg
 
     def __str__(self):
         """Returns print() or str() representation."""
