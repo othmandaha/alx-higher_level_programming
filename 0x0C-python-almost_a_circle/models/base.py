@@ -35,10 +35,10 @@ class Base:
         Args:
             list_objs (list): the list to be written.
         """
-        json_string = Base.to_json_string(list_objs)
         filename = cls.__name__ + ".json"
         with open(filename, 'w') as f:
             if list_objs is None:
                 f.write("[]")
             else:
-                f.write(json_string)
+                list_dict = [obj.to_dicionary() for obj in list_objs]
+                f.write(Base.to_json_string(list_dict))
