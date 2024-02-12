@@ -48,50 +48,54 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         if type(value) != int:
-                raise TypeError("height must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-                raise ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     @property
     def x(self):
-         """get the x of the rectangle"""
-         return self.__x
+        """get the x of the rectangle"""
+        return self.__x
 
     @x.setter
     def x(self, value):
         if type(value) != int:
-                raise TypeError("x must be an integer")
+            raise TypeError("x must be an integer")
         if value < 0:
-                raise ValueError("x must be >= 0")
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
     def y(self):
-         """get the y of the rectangle"""
-         return self.__y
+        """get the y of the rectangle"""
+        return self.__y
 
     @y.setter
     def y(self, value):
         if type(value) != int:
-                raise TypeError("y must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-                raise ValueError("y must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def are(self):
-         """calculates the are of the rectangle."""
-         return self.height * self.width
-    
+        """calculates the are of the rectangle."""
+        return self.height * self.width
+
     def display(self):
-         """Prints the rectangle using #."""
-         for i in range(self.height):
+        """Prints the rectangle using #."""
+        for y in range(y):
+            print("")
+        for i in range(self.height):
             for j in range(self.width):
+                for x in range(x):
+                    print(' ', end='')
                 print("#", end='')
             print("")
 
     def __str__(self):
-         """Returns print() or str() representation."""
-         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.x, self.y,
-                                                        self.width, self.height)
+        """Returns print() or str() representation."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
