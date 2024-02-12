@@ -95,7 +95,7 @@ class Rectangle(Base):
             [print("#", end='') for w in range(self.width)]
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the Rectangle.
 
         Args:
@@ -124,6 +124,21 @@ class Rectangle(Base):
                     self.x = arg
                 elif ac == 5:
                     self.y = arg
+        else:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v in None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "y":
+                    self.y = v
+                elif k == "x":
+                    self.x = v
 
     def __str__(self):
         """Returns print() or str() representation."""
