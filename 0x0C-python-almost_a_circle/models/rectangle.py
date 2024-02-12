@@ -95,6 +95,24 @@ class Rectangle(Base):
             [print("#", end='') for w in range(self.width)]
             print("")
 
+    def update(self, *args):
+        ac = 0
+        for arg in args:
+            if ac == 0:
+                if arg is None:
+                    self.__init__(self.width, self.height, self.x, self.y)
+            ac += 1
+            if ac == 1:
+                self.id = arg
+            elif ac == 2:
+                self.width = arg
+            elif ac == 3:
+                self.height = arg
+            elif ac == 4:
+                self.x = arg
+            elif ac == 5:
+                self.y = arg
+
     def __str__(self):
         """Returns print() or str() representation."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
