@@ -3,7 +3,7 @@ const Rectangle = require('./4-rectangle.js');
 
 class Square extends Rectangle {
   charPrint (c) {
-    if (this.char === undefined) {
+    if (c === undefined) {
       c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
