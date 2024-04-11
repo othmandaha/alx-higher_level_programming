@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
     cur.execute("""SELECT * FROM states WHERE state_name LIKE '%N'
-                ORDER BY state.d""")
+                ORDER BY states.d""")
     rows = cur.fetchall()
     for row in rows:
         print(row)
