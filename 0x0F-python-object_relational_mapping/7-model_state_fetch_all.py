@@ -15,4 +15,4 @@ if __name__ == "__main__":
     session = Session()
     result = session.query(State).order_by(State.id)
     for instance in result:
-        print("{}: {}".format(instance.name, instance.id))
+        print("{}: {}".format(instance.id, instance.name))
