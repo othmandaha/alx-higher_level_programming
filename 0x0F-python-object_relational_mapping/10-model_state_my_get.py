@@ -13,7 +13,8 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).filter(State.name == (sys.argv[4],))
-    if result is None:
-        print("Not found")
-    else:
+
+    try:
         print(result[0].id)
+    except IndexError:
+        print("Not found")
